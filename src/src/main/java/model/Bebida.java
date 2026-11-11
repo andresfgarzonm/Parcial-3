@@ -5,7 +5,7 @@ public class Bebida extends Producto {
     private EstadoBebida estadoBebida;
     private PreparacionEspecial preparacionEspecial;
 
-    // --- CONSTRUCTOR ---
+    // metodo constructor
     public Bebida(int codigoUnico, String nombre, String descripcion, int precioBase,
                   String tiempoPreparacion, int volumenMillilitros, String temperaturaServicio,
                   EstadoBebida estadoBebida, PreparacionEspecial preparacionEspecial) {
@@ -16,33 +16,33 @@ public class Bebida extends Producto {
         this.preparacionEspecial = preparacionEspecial;
     }
 
-    // --- MÉTODOS OBLIGATORIOS (HEREDADOS DE PRODUCTO) ---
+    //metodos que se necesitan
     @Override
     public double calcularPrecioVenta() {
-        double precio = this.precioBase * 1.10; // Incremento del 10% base
+        double precio = this.precioBase * 1.10;
         if (preparacionEspecial == PreparacionEspecial.SI) {
-            precio += 3000; // Recargo fijo si tiene preparación especial
+            precio += 3000;
         }
         return precio;
     }
 
     @Override
     public boolean verificarCalidad() {
-        // Validación de calidad basada en el volumen en mililitros
+
         return (volumenMillilitros >= 150 && volumenMillilitros <= 1500);
     }
 
     @Override
     public String toString() {
         return "Bebida: " + nombre +
-                " | Código: " + codigoUnico +
-                " | Descripción: " + descripcion +
-                " | Precio Base: $" + precioBase +
-                " | Tiempo: " + tiempoPreparacion +
-                " | Volumen: " + volumenMillilitros + "ml" +
-                " | Temperatura: " + temperaturaServicio +
-                " | Estado: " + estadoBebida +
-                " | Prep. Especial: " + preparacionEspecial;
+                " Código: " + codigoUnico +
+                " Descripción: " + descripcion +
+                " Precio Base: $" + precioBase +
+                " Tiempo: " + tiempoPreparacion +
+                " Volumen: " + volumenMillilitros + "ml" +
+                " Temperatura: " + temperaturaServicio +
+                " Estado: " + estadoBebida +
+                " Prep. Especial: " + preparacionEspecial;
     }
 
     // getters
@@ -77,3 +77,5 @@ public class Bebida extends Producto {
 
     public void setPreparacionEspecial(PreparacionEspecial preparacionEspecial) {
         this.preparacionEspecial = preparacionEspecial;
+        }
+    }
