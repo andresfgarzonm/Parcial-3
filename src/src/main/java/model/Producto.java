@@ -15,6 +15,14 @@ public abstract class Producto {
         this.precioBase = precioBase;
         this.tiempoPreparacion = tiempoPreparacion;
     }
+    @Override
+    public String toString() {
+        return "Código: " + codigoUnico +
+                " Nombre: " + nombre +
+                " Descripción: " + descripcion +
+                " Precio Base: $" + precioBase +
+                " Tiempo: " + tiempoPreparacion;
+    }
 
     public abstract double calcularPrecioVenta();
     public abstract boolean verificarCalidad();
