@@ -3,6 +3,7 @@ package model;
 
     public class EntregaSegura implements Empresa {
         private static final int TARIFA_BASE = 7000;
+        private EstadoServicio estadoServicio;
 
 
         /**
