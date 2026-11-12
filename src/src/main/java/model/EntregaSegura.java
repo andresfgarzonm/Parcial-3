@@ -4,7 +4,12 @@ package model;
     public class EntregaSegura implements Empresa {
         private static final int TARIFA_BASE = 7000;
 
-        @Override
+
+        /**
+         * metodo verificaraceptacion empresa entrega segura
+         * @param distanciaKm
+         * @return
+         */
         public EstadoServicio verificarAceptacion(double distanciaKm) {
             if (distanciaKm > 0 && distanciaKm <= 20) {
                 return EstadoServicio.APROBADO;
@@ -12,7 +17,12 @@ package model;
             return EstadoServicio.RECHAZADO;
         }
 
-        @Override
+
+        /**
+         * metodo calcular costo domicilio empresa entrega segura
+         * @param distanciaKm
+         * @return
+         */
         public double calcularCostoDomicilio(double distanciaKm) {
             if (verificarAceptacion(distanciaKm) == EstadoServicio.RECHAZADO) {
                 return 0;

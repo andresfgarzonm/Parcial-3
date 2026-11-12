@@ -15,6 +15,17 @@ public class Pedido {
     private Empresa empresaDomicilio;
     private double distanciaKm;
 
+    /**
+     * Metodo constructor pedido
+     * @param codigoPedido
+     * @param fecha
+     * @param tipoCliente
+     * @param estadoPedido
+     * @param modalidadEntrega
+     * @param cliente
+     * @param empresaDomicilio
+     * @param distanciaKm
+     */
     public Pedido(int codigoPedido, String fecha, String tipoCliente, EstadoPedido estadoPedido,
                   ModalidadEntrega modalidadEntrega, Cliente cliente, Empresa empresaDomicilio, double distanciaKm) {
         this.codigoPedido = codigoPedido;
