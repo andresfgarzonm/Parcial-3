@@ -31,4 +31,4 @@ public class DetallePedido {
             this.cantidad = cantidad;
         }
     }
-}
+
