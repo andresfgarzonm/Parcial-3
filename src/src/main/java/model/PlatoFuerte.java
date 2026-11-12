@@ -1,4 +1,5 @@
 package model;
+
 public class PlatoFuerte extends Producto {
     private int pesoGramos;
     private TipoPreparacion tipoPreparacion;

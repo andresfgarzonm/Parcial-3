@@ -16,6 +16,10 @@ public class Bebida extends Producto {
         this.preparacionEspecial = preparacionEspecial;
     }
 
+    public Bebida(int codigoUnico, String nombre, String bebida, int precioBase, String tiempoPreparacion, int volumenMillilitros, double v, EstadoBebida estadoBebida, PreparacionEspecial preparacionEspecial) {
+        super();
+    }
+
     //metodos que se necesitan
     @Override
     public double calcularPrecioVenta() {

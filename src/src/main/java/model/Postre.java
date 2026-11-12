@@ -7,7 +7,7 @@ public class Postre extends Producto {
 
     //metodo constructor
     public Postre(int codigoUnico, String nombre, String descripcion, int precioBase,
-                  String tiempoPreparacion, int pesoGramos, String temperaturaAlmacenamiento,
+                  String tiempoPreparacion, int pesoGramos, double temperaturaAlmacenamiento,
                   RequiereRefrigeracion requiereRefrigeracion) {
         super(codigoUnico, nombre, descripcion, precioBase, tiempoPreparacion);
         this.pesoGramos = pesoGramos;
