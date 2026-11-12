@@ -46,16 +46,18 @@ public class Pedido {
      * Valor total del pedido incluyendo domicilio cuando corresponda
      * @return
      */
+
     public double calcularValorTotalPedido() {
         double total = valorTotalProductosSolicitados();
 
         if (modalidadEntrega == ModalidadEntrega.DOMICILIO && empresaDomicilio != null) {
-            total += empresaDomicilio.calcularCostoDomicilio(distanciaKm);
+            if (empresaDomicilio.verificarAceptacion(distanciaKm) == EstadoServicio.APROBADO) {
+                total += empresaDomicilio.calcularCostoDomicilio(distanciaKm);
+            }
         }
 
         return total;
     }
-
 
     /**
      * getters y setters pedido
