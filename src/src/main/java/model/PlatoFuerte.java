@@ -19,6 +19,7 @@ public class PlatoFuerte extends Producto {
 
     @Override
     public double calcularPrecioVenta() {
+
         return this.precioBase * 1.20;
     }
 
@@ -29,6 +30,7 @@ public class PlatoFuerte extends Producto {
 
     // getters
     public int getPesoGramos() {
+
         return pesoGramos;
     }
 
@@ -37,27 +39,33 @@ public class PlatoFuerte extends Producto {
     }
 
     public EstadoCoccion getEstadoCoccion() {
+
         return estadoCoccion;
     }
 
     public ControlCoccion getControlCoccion() {
+
         return controlCoccion;
     }
 
     // setters
     public void setPesoGramos(int pesoGramos) {
+
         this.pesoGramos = pesoGramos;
     }
 
     public void setTipoPreparacion(TipoPreparacion tipoPreparacion) {
+
         this.tipoPreparacion = tipoPreparacion;
     }
 
     public void setEstadoCoccion(EstadoCoccion estadoCoccion) {
+
         this.estadoCoccion = estadoCoccion;
     }
 
     public void setControlCoccion(ControlCoccion controlCoccion) {
+
         this.controlCoccion = controlCoccion;
     }
     @Override
