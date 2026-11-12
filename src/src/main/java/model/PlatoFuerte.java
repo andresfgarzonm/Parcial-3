@@ -68,6 +68,7 @@ public class PlatoFuerte extends Producto {
 
         this.controlCoccion = controlCoccion;
     }
+
     @Override
     public String toString() {
         return "Plato Fuerte: " + nombre +
@@ -75,9 +76,5 @@ public class PlatoFuerte extends Producto {
                 " Precio Base: $" + precioBase +
                 " Precio de Venta: $" + calcularPrecioVenta() +
                 " Peso: " + pesoGramos + "g";
-    }
-    for (int i = 0; i < listaProductos.size(); i++) {
-        Producto p = listaProductos.get(i);
-        System.out.println(p.getNombre());
     }
 }

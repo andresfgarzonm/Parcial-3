@@ -1,8 +1,9 @@
 package model;
 
+
 public class Postre extends Producto {
     private int pesoGramos;
-    private String temperaturaAlmacenamiento;
+    private double temperaturaAlmacenamiento;
     private RequiereRefrigeracion requiereRefrigeracion;
 
     //metodo constructor
@@ -48,7 +49,7 @@ public class Postre extends Producto {
         return pesoGramos;
     }
 
-    public String getTemperaturaAlmacenamiento() {
+    public double getTemperaturaAlmacenamiento() {
         return temperaturaAlmacenamiento;
     }
 
@@ -61,7 +62,7 @@ public class Postre extends Producto {
         this.pesoGramos = pesoGramos;
     }
 
-    public void setTemperaturaAlmacenamiento(String temperaturaAlmacenamiento) {
+    public void setTemperaturaAlmacenamiento(double temperaturaAlmacenamiento) {
         this.temperaturaAlmacenamiento = temperaturaAlmacenamiento;
     }
 
