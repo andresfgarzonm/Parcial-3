@@ -3,6 +3,7 @@ package model;
         public class RapidoExpress implements Empresa {
 
         private static final int TARIFA_BASE = 5000;
+        private EstadoServicio estadoServicio;
 
 
             /**
