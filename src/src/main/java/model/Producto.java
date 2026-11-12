@@ -1,11 +1,11 @@
 package model;
 
 public abstract class Producto {
-    protected int codigoUnico;
-    protected String nombre;
-    protected String descripcion;
-    protected int precioBase;
-    protected String tiempoPreparacion;
+    public int codigoUnico;
+    public String nombre;
+    public String descripcion;
+    public int precioBase;
+    public String tiempoPreparacion;
 
     //metodo contructor
     public Producto(int codigoUnico, String nombre, String descripcion, int precioBase, String tiempoPreparacion) {
