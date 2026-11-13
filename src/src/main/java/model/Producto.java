@@ -7,7 +7,14 @@ public abstract class Producto {
     public int precioBase;
     public String tiempoPreparacion;
 
-    //metodo contructor
+    /**
+     * metodo constructor de producto
+     * @param codigoUnico
+     * @param nombre
+     * @param descripcion
+     * @param precioBase
+     * @param tiempoPreparacion
+     */
     public Producto(int codigoUnico, String nombre, String descripcion, int precioBase, String tiempoPreparacion) {
         this.codigoUnico = codigoUnico;
         this.nombre = nombre;
@@ -27,7 +34,10 @@ public abstract class Producto {
     public abstract double calcularPrecioVenta();
     public abstract boolean verificarCalidad();
 
-    // getters
+    /**
+     * getters y setters
+     * @return
+     */
     public int getCodigoUnico() {
         return codigoUnico;
     }
@@ -44,7 +54,7 @@ public abstract class Producto {
         return tiempoPreparacion;
     }
 
-    // setters
+
     public void setCodigoUnico(int codigoUnico) {
         this.codigoUnico = codigoUnico;
     }

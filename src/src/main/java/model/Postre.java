@@ -6,7 +6,17 @@ public class Postre extends Producto {
     private double temperaturaAlmacenamiento;
     private RequiereRefrigeracion requiereRefrigeracion;
 
-    //metodo constructor
+    /**
+     * metodo constructor postre
+     * @param codigoUnico
+     * @param nombre
+     * @param descripcion
+     * @param precioBase
+     * @param tiempoPreparacion
+     * @param pesoGramos
+     * @param temperaturaAlmacenamiento
+     * @param requiereRefrigeracion
+     */
     public Postre(int codigoUnico, String nombre, String descripcion, int precioBase,
                   String tiempoPreparacion, int pesoGramos, double temperaturaAlmacenamiento,
                   RequiereRefrigeracion requiereRefrigeracion) {
@@ -16,8 +26,10 @@ public class Postre extends Producto {
         this.requiereRefrigeracion = requiereRefrigeracion;
     }
 
-    // lo dos metodos de la clase postre
-    @Override
+    /**
+     * metodo calcular precio venta
+     * @return
+     */
     public double calcularPrecioVenta() {
         double incremento = 0.15;
         if (requiereRefrigeracion == RequiereRefrigeracion.SI) {
@@ -44,7 +56,10 @@ public class Postre extends Producto {
                 " Requiere Refrigeración: " + requiereRefrigeracion;
     }
 
-    //getters
+    /**
+     * getters y setters
+     * @return
+     */
     public int getPesoGramos() {
         return pesoGramos;
     }
@@ -57,7 +72,6 @@ public class Postre extends Producto {
         return requiereRefrigeracion;
     }
 
-    // setters
     public void setPesoGramos(int pesoGramos) {
         this.pesoGramos = pesoGramos;
     }

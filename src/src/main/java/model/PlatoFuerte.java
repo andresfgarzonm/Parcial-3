@@ -6,7 +6,18 @@ public class PlatoFuerte extends Producto {
     private EstadoCoccion estadoCoccion;
     private ControlCoccion controlCoccion;
 
-    // meetodo contructor
+    /**
+     * metodo constructor plato fuerte
+     * @param codigoUnico
+     * @param nombre
+     * @param descripcion
+     * @param precioBase
+     * @param tiempoPreparacion
+     * @param pesoGramos
+     * @param tipoPreparacion
+     * @param estadoCoccion
+     * @param controlCoccion
+     */
     public PlatoFuerte(int codigoUnico, String nombre, String descripcion, int precioBase,
                        String tiempoPreparacion, int pesoGramos, TipoPreparacion tipoPreparacion,
                        EstadoCoccion estadoCoccion, ControlCoccion controlCoccion) {
@@ -28,7 +39,10 @@ public class PlatoFuerte extends Producto {
         return (pesoGramos >= 200 && pesoGramos <= 900) && (estadoCoccion == EstadoCoccion.APROBADA);
     }
 
-    // getters
+    /**
+     * getters y setters
+     * @return
+     */
     public int getPesoGramos() {
 
         return pesoGramos;
@@ -48,7 +62,7 @@ public class PlatoFuerte extends Producto {
         return controlCoccion;
     }
 
-    // setters
+
     public void setPesoGramos(int pesoGramos) {
 
         this.pesoGramos = pesoGramos;

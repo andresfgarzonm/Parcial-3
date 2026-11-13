@@ -5,7 +5,18 @@ public class Bebida extends Producto {
     private EstadoBebida estadoBebida;
     private PreparacionEspecial preparacionEspecial;
 
-    // metodo constructor
+    /**
+     * metodo constructor bebida
+     * @param codigoUnico
+     * @param nombre
+     * @param descripcion
+     * @param precioBase
+     * @param tiempoPreparacion
+     * @param volumenMillilitros
+     * @param temperaturaServicio
+     * @param estadoBebida
+     * @param preparacionEspecial
+     */
     public Bebida(int codigoUnico, String nombre, String descripcion, int precioBase,
                   String tiempoPreparacion, int volumenMillilitros, String temperaturaServicio,
                   EstadoBebida estadoBebida, PreparacionEspecial preparacionEspecial) {
@@ -16,7 +27,10 @@ public class Bebida extends Producto {
         this.preparacionEspecial = preparacionEspecial;
     }
 
-    //metodos que se necesitan
+    /**
+     * metodo calcular precio venta
+     * @return
+     */
     @Override
     public double calcularPrecioVenta() {
         double precio = this.precioBase * 1.10;
@@ -45,7 +59,10 @@ public class Bebida extends Producto {
                 " Prep. Especial: " + preparacionEspecial;
     }
 
-    // getters
+    /**
+     * getters y setters
+     * @return
+     */
     public int getVolumenMillilitros() {
         return volumenMillilitros;
     }
@@ -62,7 +79,7 @@ public class Bebida extends Producto {
         return preparacionEspecial;
     }
 
-    // setters
+
     public void setVolumenMillilitros(int volumenMillilitros) {
         this.volumenMillilitros = volumenMillilitros;
     }

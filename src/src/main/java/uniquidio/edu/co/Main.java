@@ -7,7 +7,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Restaurante y Cliente base
+        /**
+         * 1. Restaurante y Cliente base
+         */
         ElBuenComer elBuenComer = new ElBuenComer("El Buen Comer", 900123, "Armenia",
                 new ArrayList<Cliente>(),
                 new ArrayList<Producto>(),
@@ -18,7 +20,9 @@ public class Main {
                 new ArrayList<Pedido>());
         elBuenComer.getListElBuenComerClientes().add(cliente);
 
-        // Producto inicial de prueba en la lista del menú
+        /**
+         * Producto inicial de prueba en la lista del menú
+         */
         elBuenComer.getListElBuenComerProductos().add(new PlatoFuerte(101, "Bandeja Paisa", "Tradicional", 25000,
                 "20 min", 500, TipoPreparacion.ASADO, EstadoCoccion.APROBADA, ControlCoccion.SUPERADO));
 
@@ -41,7 +45,9 @@ public class Main {
             opcion = Integer.parseInt(input);
 
             if (opcion == 1) {
-                // Ver menú
+                /**
+                 * Ver menú
+                 */
                 if (elBuenComer.getListElBuenComerProductos().size() == 0) {
                     JOptionPane.showMessageDialog(null, "El menú está vacío.");
                 } else {
@@ -51,11 +57,15 @@ public class Main {
                 }
 
             } else if (opcion == 2) {
-                // Submenú para elegir qué tipo de producto registrar
+                /**
+                 * Submenú para elegir qué tipo de producto registrar
+                 */
                 String tipoProd = JOptionPane.showInputDialog("¿Qué desea registrar?\n1. Plato Fuerte\n2. Bebida\n3. Postre");
                 if (tipoProd != null) {
                     int tipo = Integer.parseInt(tipoProd);
-                    // Código único consecutivo para no repetir códigos
+                    /**
+                     * Código único consecutivo para no repetir códigos
+                     */
                     int nuevoCodigo = 101 + elBuenComer.getListElBuenComerProductos().size();
 
                     if (tipo == 1) {
@@ -96,7 +106,9 @@ public class Main {
                 }
 
             } else if (opcion == 3) {
-                // Registrar Cliente
+                /**
+                 * Registrar Cliente
+                 */
                 String doc = JOptionPane.showInputDialog("Número de documento:");
                 String nombre = JOptionPane.showInputDialog("Nombre completo:");
                 int tel = Integer.parseInt(JOptionPane.showInputDialog("Teléfono:")); // en Cliente es int
@@ -108,14 +120,18 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "¡Cliente registrado con éxito: " + cliente.getNombreCompleto() + "!");
 
             } else if (opcion == 4) {
-                // Registrar y Confirmar Pedido
+                /**
+                 * Registrar y Confirmar Pedido
+                 */
                 JOptionPane.showMessageDialog(null, "Registrando pedido para el cliente: " + cliente.getNombreCompleto());
                 if (elBuenComer.getListElBuenComerProductos().size() == 0) {
                     JOptionPane.showMessageDialog(null, "No hay productos en el menú para armar un pedido");
                 } else if (!elBuenComer.clienteEstaRegistrado(cliente)) {
                     JOptionPane.showMessageDialog(null, "El cliente no está registrado");
                 } else {
-                    // Elegir producto del menú y cantidad
+                    /**
+                     * Elegir producto del menú y cantidad
+                     */
                     String listado = "Elija el número del producto:\n";
                     for (int i = 0; i < elBuenComer.getListElBuenComerProductos().size(); i++) {
                         Producto p = elBuenComer.getListElBuenComerProductos().get(i);
@@ -151,7 +167,9 @@ public class Main {
                 }
 
             } else if (opcion == 5) {
-                // Consultar y Actualizar Pedidos
+                /**
+                 * Consultar y Actualizar Pedidos
+                 */
                 if (elBuenComer.getListElBuenComerPedido().size() == 0) {
                     JOptionPane.showMessageDialog(null, "No hay pedidos registrados en el restaurante");
                 } else {
@@ -174,7 +192,9 @@ public class Main {
                 }
 
             } else if (opcion == 6) {
-                // Consultar las ventas del restaurante
+                /**
+                 * Consultar las ventas del restaurante
+                 */
                 int totalPedidos = elBuenComer.getListElBuenComerPedido().size();
                 Producto masVendido = elBuenComer.obtenerProductoMasVendido();
                 String nombreMasVendido = (masVendido == null) ? "Sin ventas" : masVendido.getNombre();
@@ -187,7 +207,9 @@ public class Main {
                         "Restaurante ubicado en: " + elBuenComer.getDireccion());
 
             } else if (opcion == 7) {
-                // Verificar calidad de los productos del menú
+                /**
+                 * Verificar calidad de los productos del menú
+                 */
                 if (elBuenComer.getListElBuenComerProductos().size() == 0) {
                     JOptionPane.showMessageDialog(null, "No hay productos para verificar");
                 } else {
